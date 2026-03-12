@@ -9,19 +9,54 @@
 Developed as a core component of the **DATA-245 Machine Learning** course at SJSU, this study investigates the correlation between "Food Deserts" (inequality in food access) and chronic health conditions like obesity and diabetes. By analyzing data from **2,275 US counties**, our team identified **261 "Crisis Counties"** where socioeconomic factors and food insecurity create urgent public health risks.
 
 ## 👤 My Core Contributions (Jane Heng)
-I spearheaded the research and technical implementation detailed in **Pages 16-25** of the project report, focusing on high-stakes data engineering and regression modeling:
+I led the **Advanced Optimization & Feature Interpretation** phase (Pages 16-25), transitioning the project from a failed baseline to a robust predictive model with high interpretability.
 
-* **Robust Data Quality Engineering**:
-    * **Outlier Management**: Identified and strategically managed **29% outliers**. I implemented rigorous normalization protocols over synthetic oversampling (SMOTE) to preserve the statistical integrity of the 2,275 county records.
-    * **Feature Engineering**: Conducted multi-collinearity checks and recursive feature selection to refine 20+ variables into a high-impact predictor set.
-* **Regression Benchmarking & Discovery**:
-    * Implemented and evaluated **OLS, Ridge, and Lasso Regression** models.
-    * **Major Scientific Finding**: My analysis revealed that **Insufficient Sleep** is a significantly stronger predictor of obesity and diabetes than the Food Environment Index. This "Lifestyle-First" insight shifted the project’s final policy recommendations.
-* **Statistical Inference & Interpretability**:
-    * Utilized **Standardized Coefficients** to quantify the marginal effects of income inequality and education on health risks, providing actionable insights for public health resource allocation.
-* **Interactive Analytics**: Co-developed the **Streamlit Dashboard**, specifically engineering the PCA visualization and model comparison modules.
+### 🏆 1. Feature Importance & Hypothesis Validation 
+*This is the core discovery: proving that food access is a unique, independent driver of health outcomes.*
 
+![Feature Importance](docs/images/feature_importance.jpg)
 
+* **Research Validation**: Proved that `Food_Access_Barrier_Index` is the **#3 most influential factor** (~12.2%), maintaining its impact even after controlling for income and education.
+* **Key Insight**: Validated that food deserts are not merely proxies for poverty but require independent policy interventions.
+
+---
+
+### 🛠️ 2. Iterative Model Optimization
+*I spearheaded a four-stage refinement process to overcome initial model failure.*
+
+![Optimization Pipeline](docs/images/optimization_pipeline.jpg)
+
+* **Problem Formulation**: Identified flaws in the initial "Three-Class Baseline" (55% accuracy) and reformulated the task into a more robust binary classification.
+* **Performance Jump**: Achieved a progressive refinement in accuracy from **55% → 68.11%**.
+
+---
+
+### 🔬 3. Advanced Noise Filtering with DBSCAN 
+*Utilized unsupervised learning to handle spatial data irregularities.*
+
+![DBSCAN PCA Visualization](docs/images/dbscan_pca.jpg)
+
+* **DBSCAN Implementation**: Used density-based clustering to isolate 46 high-leverage outliers (2.94% of data) through PCA-reduced spatial analysis.
+* **Algorithmic Edge**: This precision cleaning enabled **Extra Trees** to reach its peak performance with a **2.52x training speedup**.
+
+---
+
+### 📊 4. Model Evaluation & Error Analysis
+*Ensuring the model's reliability for public health decision-making.*
+
+![Confusion Matrix](docs/images/confusion_matrix.jpg)
+
+* **Metrics**: Leveraged **Confusion Matrices** to balance Precision and Recall, ensuring the model effectively captures "High-Risk" counties without excessive false alarms.
+
+---
+
+### 🗺️ 5. US-Wide Geospatial Validation 
+*Demonstrating real-world applicability at a national scale.*
+
+![US Prediction Map](docs/images/prediction_map.jpg)
+
+* **Generalization**: Successfully mapped predictions for **2,236 US Counties**.
+* **Reliability**: Maintained **67.1% accuracy** on a completely unseen test set (456 counties), proving the model's value for national health policy planning.
 
 ---
 
