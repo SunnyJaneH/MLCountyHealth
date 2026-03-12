@@ -14,7 +14,7 @@ I led the **Advanced Optimization & Feature Interpretation** phase (Pages 16-25)
 ### 🏆 1. Feature Importance & Hypothesis Validation 
 *This is the core discovery: proving that food access is a unique, independent driver of health outcomes.*
 
-![Feature Importance](docs/images/feature_importance.jpg)
+![Feature Importance](docs/images/feature_importance.png)
 
 * **Research Validation**: Proved that `Food_Access_Barrier_Index` is the **#3 most influential factor** (~12.2%), maintaining its impact even after controlling for income and education.
 * **Key Insight**: Validated that food deserts are not merely proxies for poverty but require independent policy interventions.
@@ -24,7 +24,7 @@ I led the **Advanced Optimization & Feature Interpretation** phase (Pages 16-25)
 ### 🛠️ 2. Iterative Model Optimization
 *I spearheaded a four-stage refinement process to overcome initial model failure.*
 
-![Optimization Pipeline](docs/images/optimization_pipeline.jpg)
+![Optimization Pipeline](docs/images/optimization_pipeline.png)
 
 * **Problem Formulation**: Identified flaws in the initial "Three-Class Baseline" (55% accuracy) and reformulated the task into a more robust binary classification.
 * **Performance Jump**: Achieved a progressive refinement in accuracy from **55% → 68.11%**.
@@ -34,7 +34,7 @@ I led the **Advanced Optimization & Feature Interpretation** phase (Pages 16-25)
 ### 🔬 3. Advanced Noise Filtering with DBSCAN 
 *Utilized unsupervised learning to handle spatial data irregularities.*
 
-![DBSCAN PCA Visualization](docs/images/dbscan_pca.jpg)
+![DBSCAN PCA Visualization](docs/images/dbscan_pca.png)
 
 * **DBSCAN Implementation**: Used density-based clustering to isolate 46 high-leverage outliers (2.94% of data) through PCA-reduced spatial analysis.
 * **Algorithmic Edge**: This precision cleaning enabled **Extra Trees** to reach its peak performance with a **2.52x training speedup**.
@@ -44,7 +44,7 @@ I led the **Advanced Optimization & Feature Interpretation** phase (Pages 16-25)
 ### 📊 4. Model Evaluation & Error Analysis
 *Ensuring the model's reliability for public health decision-making.*
 
-![Confusion Matrix](docs/images/confusion_matrix.jpg)
+![Confusion Matrix](docs/images/confusion_matrix.png)
 
 * **Metrics**: Leveraged **Confusion Matrices** to balance Precision and Recall, ensuring the model effectively captures "High-Risk" counties without excessive false alarms.
 
@@ -53,7 +53,7 @@ I led the **Advanced Optimization & Feature Interpretation** phase (Pages 16-25)
 ### 🗺️ 5. US-Wide Geospatial Validation 
 *Demonstrating real-world applicability at a national scale.*
 
-![US Prediction Map](docs/images/prediction_map.jpg)
+![US Prediction Map](docs/images/prediction_map.png)
 
 * **Generalization**: Successfully mapped predictions for **2,236 US Counties**.
 * **Reliability**: Maintained **67.1% accuracy** on a completely unseen test set (456 counties), proving the model's value for national health policy planning.
